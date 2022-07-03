@@ -26,7 +26,7 @@ public class CurrService {
 
     public Currency currencyCheck(Double avg, String datefrom, String dateto) {
 
-        String uri = "http://api.nbp.pl/api/exchangerates/tables/a/" +  avg + "/" + datefrom + "/" + dateto + "/?format=json";
+        String uri = "http://api.nbp.pl/api/exchangerates/tables/a/" + avg + "/" + datefrom + "/" + dateto + "/?format=json";
         RestTemplate restTemplate = new RestTemplate();
 
         String result = restTemplate.getForObject(uri, String.class);
